@@ -1,0 +1,295 @@
+.main{
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+}
+.email-toggle{
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  background-color: #fff;
+}
+.email-toggle button{
+  border: 1px solid #EB4747;
+  background-color: #fff;
+  color: #EB4747;
+  width: 150px;
+  height: 50px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+
+}
+.email-toggle button.active{
+  border: none;
+  background-color: #EB4747;
+  color: #fff;
+}
+.edit-email,
+.email-verification {
+  display: none;
+  
+}
+
+.edit-email.active,
+.email-verification.active {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  padding: 10px;
+  background-color: #fff;
+}
+.email-verification.active .verification-top, .edit-email.active .edit-top{
+  width: 100vw;
+  height: 85px;
+  background-color: #EB4747;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.email-verification.active .verification-top .email-logo, .edit-email.active .edit-top .email-logo{
+  width: 75px;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  color: #EB4747;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.verification-mid, .edit-mid{
+  padding: 10px;
+}
+.verification-mid h3, .edit-mid h3{
+ font-size: 45px;
+}
+.verification-mid p, .edit-mid p{
+  font-size: 25px;
+}
+.verification-bottom button, .edit-bottom button{
+  width: 230px;
+  height: 50px;
+  border: none;
+  background-color: #EB4747;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 10px;
+}
+.edit-bottom form {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   width: 400px;
+   padding: 10px;
+   gap: 10px;
+}
+.edit-bottom form input{
+  width: 230px;
+  height: 50px;
+  border: 2px solid #EB4747;
+  border-radius: 10px;
+  padding-left: 15px;
+  font-size: 18px;
+  color: #EB4747;
+  outline: none;
+
+}
+.site-footer {
+  width: 100vw;
+  height: auto;
+  overflow: hidden;
+  background-color: #f8f9fa;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  color: #333;
+}
+#footer-links a{
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  font-weight: 600;
+}
+#footer-links a:hover{
+  transition: 0.4s;
+  color: #fff;
+}
+
+.footer-top p {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.app-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.app-icons img {
+  width: 140px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.app-icons img:hover {
+  transform: scale(1.05);
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.footer-links a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.social-icons {
+  margin: 20px 0;
+}
+
+.social-icons a {
+  color: #333;
+  margin: 0 10px;
+  font-size: 22px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #007bff;
+}
+
+.footer-bottom p {
+  margin: 6px 0;
+  font-size: 13px;
+}
+
+.footer-bottom a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .app-icons img {
+    width: 120px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-links a,
+  .social-icons a {
+    font-size: 16px;
+  }
+  
+}
+@media (max-width: 350px){
+
+  
+  .email-toggle{
+    width: 100%;
+    height: 80px;
+    gap: 15px;
+  }
+  .email-toggle button{
+    width: 120px;
+    height: 40px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+  
+  }
+  
+  
+  .edit-email.active,
+  .email-verification.active {
+    width: 100vw;
+    height: 100vh;
+    padding: 10px;
+  }
+  .email-verification.active .verification-top, .edit-email.active .edit-top{
+    width: 100vw;
+    height: 90px;
+  }
+  .email-verification.active .verification-top .email-logo, .edit-email.active .edit-top .email-logo{
+    width: 70px;
+    height: 70px;
+    
+    font-size: 30px;
+    border-radius: 50%;
+  }
+  
+  .verification-mid, .edit-mid{
+    padding: 10px;
+  }
+  .verification-mid h3, .edit-mid h3{
+   font-size: 20px;
+  }
+  .verification-mid p, .edit-mid p{
+    font-size: 13px;
+  }
+  .verification-bottom button, .edit-bottom button{
+    width: 230px;
+    height: 50px;
+    border: none;
+    background-color: #EB4747;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 10px;
+  }
+  .edit-bottom form {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     width: 400px;
+     padding: 10px;
+     gap: 10px;
+  }
+  .edit-bottom form input{
+    width: 230px;
+    height: 50px;
+    border: 2px solid #EB4747;
+    border-radius: 10px;
+    padding-left: 15px;
+    font-size: 18px;
+    color: #EB4747;
+    outline: none;
+  
+  }
+
+
+}
