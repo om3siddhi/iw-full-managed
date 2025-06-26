@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('partials/header') %>
+  
+    <link rel="stylesheet" href="/css/emailverification.css">
+    <link rel="icon" type="image/png" href="/images/iw5.png">
+    <title>IndianWife.in</title>
+</head>
+<body>
+  <%- include('partials/popmsg') %>
+  <div class="main">
+    <div class="email-toggle">
+      <button id="showEdit">Edit Email</button>
+      <button id="showVerify" class="active">Email Verification</button>
+    </div>
+  
+    <div id="edit" class="edit-email">
+      <div class="edit-top">
+        <div class="email-logo"><i class="fa-regular fa-envelope"></i></div>
+      </div>
+      <div class="edit-mid">
+        <h3>Email verification</h3>
+          <p>
+            It looks like you may have entered the wrong email address <strong><%= currUser.email %></strong> by mistake. 
+            Don't worry — you can update it below. Please note, you can only change your email once, 
+            so make sure to enter the correct address this time.
+          </p>
+      </div>
+      <div class="edit-bottom">
+        <form action="/email-modification" method="post">
+          <input type="email" name="newEmail" placeholder="Enter correct Email" required>
+          <button type="submit">Update Email Address</button>
+        </form>
+      </div>
+    </div>
+  
+    <div id="verify" class="email-verification active">
+      <div class="verification-top">
+           <div class="email-logo"><i class="fa-regular fa-envelope"></i></div>
+      </div>
+      <div class="verification-mid">
+        <h3>Email verification</h3>
+        <p>Hi <%= currUser.fullname %>,
+
+          You're almost set to start enjoying IndianWife.in . Simply click the link below to verify your email ( <%= currUser.email %> ) address and get started. The link expires in 48 hours.</p>
+          <br>
+          <p>If you’ve accidentally entered the wrong email address, don’t worry — you can update it once by clicking the Edit Email option.</p>
+      </div>
+      <div class="verification-bottom">
+        <form action="/email-verification" method="post">
+          <button>Verify Your Email Adress</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+
+  <footer class="site-footer">
+    <div class="footer-top">
+      <p>Download Our App</p>
+      <div class="app-icons">
+        <a href="#"><img src="/images/playstore.svg" alt="Download on Play Store"></a>
+        <a href="#"><img src="/images/applestore.svg" alt="Download on iOS"></a>
+      </div>
+    </div>
+  
+    <div class="footer-links" id="footer-links">
+      <a href="/p-policy">Privacy Policy</a>
+      <a href="/terms">T&C</a>
+      <a href="/about">About</a>
+      <a href="mailto:support@indianwife.com">Email</a>
+      <a href="https://wa.me/919105704011" target="_blank">WhatsApp</a>
+    </div>
+  
+    <div class="social-icons">
+      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  
+    <div class="footer-bottom">
+      <p>© 2025 IndianWife.com | All Rights Reserved</p>
+      <p>Web Design by <a href="https://addplace.com" target="_blank">AddPlace.com</a></p>
+    </div>
+  </footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            console.log("✅ jQuery is working!");
+        });
+    </script>
+    <script src="/js/emailverification.js"></script>
+</body>
+</html>

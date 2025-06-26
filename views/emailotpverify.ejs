@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('partials/header') %>
+  
+    <link rel="stylesheet" href="/css/emailotpverify.css">
+    <link rel="icon" type="image/png" href="/images/iw5.png">
+    <title>IndianWife.in</title>
+</head>
+<body>
+  <%- include('partials/popmsg') %>
+  <div class="main">
+    <div id="edit" class="edit-email">
+      <div class="edit-top">
+        <div class="email-logo"><i class="fa-regular fa-envelope"></i></div>
+      </div>
+      <div class="edit-mid">
+        <h3>OTP Verification</h3>
+  <p>We've sent a 6-digit One Time Password (OTP) to your registered email address. Please check your inbox or spam folder and enter the OTP below to verify your email.</p>
+      </div>
+      <div class="edit-bottom">
+        <form action="/email-otp-verification" method="POST">
+          
+          <input 
+            type="number" 
+            name="otp2" 
+            placeholder="Enter 6-digit OTP" 
+            required 
+            minlength="6" 
+            maxlength="6"
+            style="margin: 10px 0; padding: 8px;"
+          >
+          
+          <button type="submit">Verify OTP</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  
+
+
+  
+  
+  
+
+  <footer class="site-footer">
+    <div class="footer-top">
+      <p>Download Our App</p>
+      <div class="app-icons">
+        <a href="#"><img src="/images/playstore.svg" alt="Download on Play Store"></a>
+        <a href="#"><img src="/images/applestore.svg" alt="Download on iOS"></a>
+      </div>
+    </div>
+  
+    <div class="footer-links" id="footer-links">
+      <a href="/p-policy">Privacy Policy</a>
+      <a href="/terms">T&C</a>
+      <a href="/about">About</a>
+      <a href="mailto:support@indianwife.com">Email</a>
+      <a href="https://wa.me/919105704011" target="_blank">WhatsApp</a>
+    </div>
+  
+    <div class="social-icons">
+      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  
+    <div class="footer-bottom">
+      <p>© 2025 IndianWife.com | All Rights Reserved</p>
+      <p>Web Design by <a href="https://addplace.com" target="_blank">AddPlace.com</a></p>
+    </div>
+  </footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            console.log("✅ jQuery is working!");
+        });
+    </script>
+    <script src="/js/emailotpverify.js"></script>
+</body>
+</html>
