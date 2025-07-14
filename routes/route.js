@@ -1824,7 +1824,7 @@ router.post("/request-kundali-match", async (req, res) => {
       return res.redirect("/");
     }
     if (req.user.plan.contacts === 0) {  
-      return res.json({ success: false, message: "Upgrade plane to send request!" });
+      return res.json({ success: false, message: "Upgrade plan to send request!" });
   }
   
 
