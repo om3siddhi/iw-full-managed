@@ -889,6 +889,8 @@ font-family: Arial, sans-serif;
   text-align: center;
   color: #333;
   margin: 10px;
+  padding: 10px;
+  display: flex;
   
 }
 
@@ -896,6 +898,7 @@ font-family: Arial, sans-serif;
 
 
   
+
 
 
 
