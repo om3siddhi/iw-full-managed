@@ -885,4 +885,18 @@
   }
 
 
+.center-text-div {
+    display: flex;              /* Enable Flexbox */
+      /* Center horizontally */
+         /* Center vertically */
+    text-align: center;         /* Center text inside the div */
+              /* Take full viewport height */
+    padding: 5px;              /* Comfortable padding on all sides */
+         /* Include padding in width/height */
+}
+
+
+
+  
+
 
